@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Counts the programming languages of the repos you own/star/watch">
+    <meta name="author" content="Cumhur Korkut">
+    <title>Github Language Counter</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle nav</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">GitHub Language Counter</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <span class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" id="username" placeholder="GitHub user name" class="form-control">
+            </div>
+            <button class="btn btn-success">Look up</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+      <h1></h1>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Own Repositories</h2>
+          <ul data-pie-id="repos-chart" data-options='{"donut": "true"}'>
+          </ul>
+          <div id="repos-chart"></div>
+        </div>
+        <div class="starred col-md-4">
+          <h2>Starred</h2>
+          <ul data-pie-id="starred-chart" data-options='{"donut": "true"}'>
+          </ul>
+          <div id="starred-chart"></div>
+       </div>
+        <div class="subscriptions col-md-4">
+          <h2>Watching</h2>
+          <ul data-pie-id="subscriptions-chart" data-options='{"donut": "true"}'>
+          </ul>
+          <div id="subscriptions-chart"></div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="jumbotron">
+      <div class="container">
+        <p>This little app shows you the graph of programming languages of the projects you own, you have starred, or you have been watching. You can start to look up a user from the input box on the top right corner.</p>
+        <footer>
+            <p class="pull-right"><a href="http://joom.github.io">@joom</a></p>
+        </footer>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/pizza/0.0.1/vendor/snap.svg.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/pizza/0.0.1/pizza.min.js"></script>
+    <script src="js/language-counter.min.js"></script>
+  </body>
+</html>

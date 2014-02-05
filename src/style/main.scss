@@ -1,0 +1,23 @@
+/* main.scss */
+
+@import 'reset';
+
+body {
+  font-size: 100% Helvetica, sans-serif;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+li + li::before {
+    content: " | ";
+}
+
+ul[data-pie-id] li {
+	display: inline;
+}
+
+.content {
+	display:none;
+}
+
+@import 'pizza';
